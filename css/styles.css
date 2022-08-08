@@ -50,6 +50,18 @@ body {
     font-family: var(--primary-font);
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    padding: 0;
+    left: 90px;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -649,11 +661,11 @@ margin-top: 9px;
 }
 
 .subscribe-input-form:focus {
-    outline: auto;
+    outline: transparent;
     /* outline: 2px solid var(--accent-color); */
 }
 
-.subscribe-btn-div {
+/* .subscribe-btn-div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -665,29 +677,46 @@ margin-top: 9px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color: #ffffff;
-}
-
-.subscribe-btn:focus {
-    outline: auto
-}
+} */
 
 .subscribe-btn {
-    font-family: 'Roboto';
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    padding-left: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 62px;
+
+
+    background-color: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    position: relative;
+    font-family: var(--primary-font);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
     /* identical to box height, or 188% */
 
-    display: flex;
+    display: inline-block;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    background-color: transparent;
-    outline: none;
+
     border: none;
     color: #FFFFFF;
-
 }
+.subscribe-btn:focus {
+    outline: 2px solid;
+}
+.subscribe-icon {
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 /* FOOTER */
 
@@ -782,6 +811,7 @@ margin-top: 9px;
     
     color: #212121;
     margin-bottom: 30px;
+    
 
 }
 
@@ -808,19 +838,31 @@ margin-top: 9px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
+    transition: border-color var(--transition-dur-and-func)
 }
+.modal-form-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+.modal-form-input:focus+ .modal-form-icon {
+    fill: var(--accent-color);
+    transition: fill var(--transition-dur-and-func)
+} 
+
+   
 
 .modal-form-input-wrapper {
     display: block;
     position: relative;
     margin-bottom: 10px;
+    
 }
 .modal-form-icon{
     position: absolute;
     left: 14px;
     top: 50%;
     transform: translateY(-50%);
-    transition: background-color var(--transition-dur-and-func)
+    transition: fill var(--transition-dur-and-func)
 }
 
 .modal-form-message{
@@ -836,14 +878,21 @@ margin-top: 9px;
     letter-spacing: 0.01em;
     padding: 12px 16px;
     margin-bottom: 20px;
-
+    outline: none;
+    
 }
+.modal-form-message:focus {
+    border-color: var(--accent-color);
+}
+
 .modal-form-message::placeholder{
     color: rgba(117, 117, 117, 0.5);
 }
 .modal-form-check-desc {
     display: flex;
+    position: relative;
     align-items: center;
+    justify-content: center;
     font-size: 14px;
     margin-bottom: 20px;
     font-family: var(--primary-font);
@@ -864,26 +913,65 @@ margin-top: 9px;
     cursor: pointer;
     border-radius: 2px;
     margin-right: 7px;
+
+    
+}
+
+
+.modal-form-check:focus+.modal-form-check-desc::before {
+    outline: 2px solid var(--accent-color);
 }
 
 .modal-form-check:checked+.modal-form-check-desc::before {
     background-color: var(--accent-color);
+    border: none;
+    cursor: pointer;
     
 }
 .modal-form-check:checked+.modal-form-submit-icon {
-    fill: white;
+    background-color: #2196F3;
+    cursor: pointer;
 }
 
-
-
-    .modal-form-check-div{
-    position: relative;
+.modal-form-check-div{
+position: relative;
 }
+
 .modal-form-submit-icon {
-    position: absolute;
-    left: 3px;
+    left: 12.5px;
     top: 4px;
+    position: absolute;
+    fill: white;
+    cursor: pointer;
+    transition: fill var(--accent-color);
+   
     /* transform: translate(-3px -4px); */
+}
+
+.modal-form-submit-btn{
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 0px;
+    width: 200px;
+    height: 50px;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px auto;
+    
+    
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    
+}
+.modal-form-submit-btn:focus{
+    outline: 2px solid black;
 }
 
 
