@@ -810,7 +810,7 @@ margin-top: 9px;
     letter-spacing: 0.03em;
     
     color: #212121;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
     
 
 }
@@ -820,16 +820,17 @@ margin-top: 9px;
 }
 
 .modal-form-input-desc{
+    display: inline-block;
     font-family: var(--primary-font);
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 1.16;
-        /* identical to box height */
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    /* identical to box height */
     
-        letter-spacing: 0.01em;
+    letter-spacing: 0.01em;
     
-        color: #757575;
-        margin-bottom: 4px;
+    color: #757575;
+    margin-bottom: 4px;
 }
 
 .modal-form-input{
@@ -935,6 +936,10 @@ margin-top: 9px;
 
 .modal-form-check-div{
 position: relative;
+}
+
+.modal-form-link { 
+    color: rgba(33, 150, 243, 1);
 }
 
 .modal-form-submit-icon {
