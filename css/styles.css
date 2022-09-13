@@ -5,7 +5,7 @@
 --main-color: #212121;
 --secondary-color: #FFFFFF;
 --subcolor: #757575;
---transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+--transition-dur-and-func: 3250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html{
@@ -197,6 +197,8 @@ body {
     color: currentColor;
     margin-left: auto;
     transition: color var(--transition-dur-and-func);
+display: flex;
+    align-items: center;
 }
 
 .email:hover,
@@ -233,18 +235,13 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     transition: color var(--transition-dur-and-func);
-
     color: currentColor;
-
+    display: flex;
+    align-items: center;
 }
 
 .email:hover,
 .email:focus {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
     color: var(--accent-color);
 
 }
@@ -291,7 +288,7 @@ body {
 
 .mdl-btn {
         font-family: var(--primary-font);
-        background-color: #2196F3;
+        background-color: var(--accent-color);
         border-radius: 4px;
         border: 0px;
         font-weight: 700;
@@ -333,7 +330,7 @@ padding-top: 0px;
 }
 
 .about-section-icon {
-    fill: solid #212121;
+    fill: solid var(--main-color);
 } 
 .about-section-link:not(:last-child){
     margin-right: 30px;
@@ -470,7 +467,7 @@ padding-top: 0px;
 .social-list-link:hover,
 .social-list-link:focus {
     
-    background-color: #2196F3;
+    background-color: var(--accent-color);
 }
 
 .social-list-icon {
@@ -483,10 +480,6 @@ padding-top: 0px;
     fill: var(--secondary-color)
 }
 
-/* .div-section-clients {
-margin-top: 94px;
-background-color: #FFFFFF;
-} */
 .section-clients {
     display: flex;
     justify-content: center;
@@ -517,12 +510,12 @@ background-color: #FFFFFF;
 
 .section-clients-link:hover .section-clients-icon,
 .section-clients-link:focus .section-clients-icon{
-    fill: #2196F3;
+    fill: var(--accent-color);
 }
 .section-clients-link:hover,
 .section-clients-link:focus{
     
-    border: 1px solid #2196F3;
+    border: 1px solid var(--accent-color);
     border-radius: 4px;
 }
 
@@ -635,7 +628,7 @@ margin-top: 9px;
 .footer-clients-list:hover,
 .footer-clients-list:focus {
     transition: background-color var(--transition-dur-and-func);
-    background-color: #2196F3;
+    background-color: var(--accent-color);
 }
 
 .footer-list-icon {
@@ -702,8 +695,7 @@ margin-top: 9px;
     height: 50px;
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    color: #ffffff;
+
 } */
 
 .subscribe-btn {
@@ -716,7 +708,7 @@ margin-top: 9px;
     padding-right: 62px;
 
 
-    background-color: #2196F3;
+    background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     position: relative;
@@ -836,7 +828,7 @@ margin-top: 9px;
     text-align: center;
     letter-spacing: 0.03em;
     
-    color: #212121;
+    color: var(--main-color);
     margin-bottom: 12px;
     
 
@@ -862,7 +854,7 @@ margin-top: 9px;
     
     letter-spacing: 0.01em;
     
-    color: #757575;
+    color: var(--subcolor);
     margin-bottom: 4px;
 }
 
@@ -940,7 +932,7 @@ margin-top: 9px;
     display: block;
     width: 18px;
     height: 18px;
-    border: 2px solid #212121;
+    border: 2px solid var(--main-color);
     content: '';
     cursor: pointer;
     border-radius: 2px;
@@ -961,7 +953,7 @@ margin-top: 9px;
     
 }
 .modal-form-check:checked+.modal-form-submit-icon {
-    background-color: #2196F3;
+    background-color: var(--accent-color);
     cursor: pointer;
 }
 
