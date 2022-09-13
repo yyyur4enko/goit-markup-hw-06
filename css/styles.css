@@ -564,6 +564,7 @@ margin-top: 20px;
 }
 .div-footer {
     display: flex;
+    justify-content: space-between;
 }
 
 .footer-email-tel-div{
@@ -651,17 +652,19 @@ margin-top: 9px;
     transition: fill var(--transition-dur-and-func);
     fill: var(--secondary-color);
 }
-.footer-social-li {
+/* .footer-social-li {
     margin-left: 70px;
-}
+} */
 .subscribe {
     display: inline-block;
-    margin-left: 93px;
-    margin-right: auto;
+    
+    /* margin-left: 93px;
+    margin-right: auto; */
 }
 
 .subscribe-form {
     display: flex;
+    align-items: flex-end;
 }
 
 .subscribe-text {
@@ -826,7 +829,7 @@ margin-top: 9px;
 .modal-form{
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    padding: 40px;
 }
 
 .modal-form-text{
@@ -845,12 +848,18 @@ margin-top: 9px;
 
 .modal-form-field{
     display: block;
+    width: 448px;
+    margin-bottom: 10px;
+}
+.modal-form-field:last-child {
+    margin-bottom: 20px;
 }
 
+
 .modal-form-input-desc{
-    display: inline-block;
-    font-family: var(--primary-font);
-    font-weight: 400;
+    display: block;
+    /* font-family: var(--primary-font);
+    font-weight: 400; */
     font-size: 12px;
     line-height: 1.16;
     /* identical to box height */
@@ -878,12 +887,9 @@ margin-top: 9px;
     transition: fill var(--transition-dur-and-func)
 } 
 
-   
-
 .modal-form-input-wrapper {
     display: block;
     position: relative;
-    margin-bottom: 10px;
     
 }
 .modal-form-icon{
@@ -908,6 +914,7 @@ margin-top: 9px;
     padding: 12px 16px;
     margin-bottom: 20px;
     outline: none;
+    display: block;
     
 }
 .modal-form-message:focus {
@@ -923,11 +930,11 @@ margin-top: 9px;
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-family: var(--primary-font);
     font-weight: 400;
-    line-height: 24px;
-    color: #757575;
+    line-height: calc(24 \ 14);
+    color: var(--subcolor);
     
     letter-spacing: 0.03em;
     
