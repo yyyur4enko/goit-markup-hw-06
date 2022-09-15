@@ -202,7 +202,6 @@ body {
     letter-spacing: 0.02em;
     color: currentColor;
     margin-left: auto;
-    /* transition: color var(--transit-dur-and-func); */
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -519,14 +518,12 @@ padding-top: 0px;
     border-radius: 4px;
     width: 170px;
     height: 92px;
-    /* transition: border var(--transit-dur-and-func); */
     transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-clients-icon {
     fill: #AFB1B8;
-    /* transition: fill var(--transit-dur-and-func); */
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -566,7 +563,6 @@ padding-top: 0px;
     letter-spacing: 0.03em;
     color: var(--secondary-color);
     min-width: 231px;
-    /* transition: color var(--transit-dur-and-func); */
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -583,6 +579,7 @@ margin-top: 20px;
 .div-footer {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 .footer-email-tel-div{
@@ -597,7 +594,6 @@ margin-top: 9px;
     /* or 171% */
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-    /* transition: color var(--transit-dur-and-func); */
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -615,7 +611,6 @@ margin-top: 9px;
         letter-spacing: 0.03em;
     
         color: rgba(255, 255, 255, 0.6);
-        /* transition: color var(--transit-dur-and-func); */
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -657,11 +652,13 @@ margin-top: 9px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-clients-list:hover,
 .footer-clients-list:focus {
-    /* transition: background-color var(--transit-dur-and-func); */
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -669,7 +666,6 @@ margin-top: 9px;
 }
 
 .footer-list-icon {
-    /* transition: fill var(--transit-dur-and-func); */
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -678,7 +674,6 @@ margin-top: 9px;
 
 .footer-clients-list:hover .footer-list-icon,
 .footer-clients-list:focus .footer-list-icon {
-    /* transition: fill var(--transit-dur-and-func); */
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -842,7 +837,6 @@ margin-top: 9px;
         background: var(--secondary-color);
         border: 1px solid rgba(0, 0, 0, 0.1);
         padding: 0;
-        /* transition: border-color var(--transit-dur-and-func); */
         transition-property: border-color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -856,7 +850,6 @@ margin-top: 9px;
 transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    /* transition: fill var(--transit-dur-and-func); */
 }
 
 .modal-close-btn:hover .modal-close-btn-icon,
@@ -915,7 +908,6 @@ transition-property: fill;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
-    /* transition: border-color var(--transit-dur-and-func); */
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -926,7 +918,6 @@ transition-property: fill;
 }
 .modal-form-input:focus+ .modal-form-icon {
     fill: var(--accent-color);
-    /* transition: fill var(--transit-dur-and-func) */
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -942,7 +933,6 @@ transition-property: fill;
     left: 14px;
     top: 50%;
     transform: translateY(-50%);
-    /* transition: fill var(--transit-dur-and-func) */
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1026,12 +1016,10 @@ transition-property: fill;
     position: absolute;
     fill: white;
     cursor: pointer;
-    /* transition: fill var(--accent-color); */
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    
-    /* transform: translate(-3px -4px); */
 }
 
 .modal-form-submit-btn{
@@ -1114,15 +1102,10 @@ transition-property: fill;
 }
 
 .portfolio-card {
-    flex-basis: calc((100%-60px)\3);
-    /* transition: box-shadow var(--transit-dur-and-func); */
+    flex-basis: calc((100% - 60px) / 3);
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    /* max-width: 370px; */
-    /* margin-right: 30px;
-    margin-bottom: 30px; */
 }
 
 .portfolio-card:hover,
@@ -1192,7 +1175,6 @@ transition-property: fill;
     letter-spacing: 0.03em;
     background-color: rgba(33, 150, 243, 0.9);
     color: var(--secondary-color);
-    /* transition: transform var(--transit-dur-and-func); */
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
